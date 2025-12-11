@@ -1,0 +1,230 @@
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #1e293b, #0f172a);
+  color: white;
+  overflow-x: hidden;
+}
+
+
+/* ----------------- INTRO SCREEN CENTER ----------------- */
+.intro {
+  height: 100vh;                  /* Full screen height */
+  display: flex;                  /* Flex container */
+  flex-direction: column;         /* Stack items vertically */
+  justify-content: center;        /* Vertical center */
+  align-items: center;            /* Horizontal center */
+  text-align: center;             /* Center text inside */
+  background-color: rgba(59, 130, 246, 0.4);     /* Optional background */
+}
+.profile-btn-container {
+  text-align: center;       /* center the button horizontally */
+  margin: 20px 0;           /* spacing above/below */
+}
+
+.profile-btn {
+  padding: 10px 20px;
+  background-color: #ff7f50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.profile-btn:hover {
+  background-color: #ff5722;
+}
+
+
+.profile-pic {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border: 3px solid #4fa3ff;
+}
+
+.intro-name {
+  font-size: 28px;
+  margin: 5px 0;
+  font-weight: bold;
+}
+
+.intro-role {
+  font-size: 20px;
+  color: #e7dfdfea;
+  margin-bottom: 20px;
+}
+
+.start-btn {
+  padding: 10px 25px;
+  background: #4fa3ff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.start-btn:hover {
+  background: #0077e6;
+}
+
+
+header {
+  text-align: center;
+  padding: 30px 0;
+  animation: fadeDown 1s ease-in-out;
+}
+
+.title {
+  font-size: 2.5rem;
+  letter-spacing: 1px;
+  font-weight: 600;
+  text-shadow: 0 0 10px rgba(255,255,255,0.3);
+  animation: glow 2s infinite alternate;
+}
+
+/* Week Buttons Row */
+.week-container {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  flex-wrap: wrap;
+  padding: 15px;
+  animation: fadeUp 1.2s ease-in-out;
+}
+
+.week-container button {
+  padding: 12px 22px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  background: #3b82f6;
+  color: white;
+  transition: 0.3s ease;
+  box-shadow: 0 0 10px rgba(59, 130, 246, 0.4);
+}
+
+.week-container button:hover {
+  background: #60a5fa;
+  transform: translateY(-3px);
+}
+
+/* Week Content Screen */
+#week-screen {
+  width: 100%;
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 20px;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.hidden {
+  display: none;
+}
+
+.week-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+  text-shadow: 0 0 10px #ffffff3b;
+  animation: fadeDown 0.8s ease;
+}
+
+/* Content Boxes */
+.section-box {
+  background: rgba(255,255,255,0.1);
+  padding: 18px;
+  margin-top: 20px;
+  border-radius: 14px;
+  backdrop-filter: blur(8px);
+  animation: zoomIn 0.6s ease;
+  border-left: 4px solid #3b82f6;
+}
+
+.section-header {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  font-weight: 600;
+  color: #60a5fa;
+}
+
+.section-box ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.section-box ul li {
+  margin: 6px 0;
+  font-size: 0.95rem;
+}
+
+/* Back Button */
+.back-btn {
+  margin-top: 25px;
+  display: block;
+  width: 120px;
+  padding: 10px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: crimson;
+  color: white;
+  font-size: 1rem;
+  transition: 0.3s ease;
+}
+
+.back-btn:hover {
+  background: #ff4d6d;
+  transform: translateY(-3px);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes zoomIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes glow {
+  from { text-shadow: 0 0 5px #ffffff60; }
+  to { text-shadow: 0 0 15px #ffffffa0; }
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+  .title {
+    font-size: 1.8rem;
+  }
+
+  #week-screen {
+    padding: 10px;
+  }
+
+  .section-box {
+    padding: 15px;
+  }
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Monthly Report</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Favicon for browser tab -->
+  <link rel="icon" type="image/png" href="images/logo.png">
+</head>
+
+
+<body>
+
+    
+  <!-- ---------------------- INTRO SCREEN ---------------------- -->
+  <div id="intro-screen"  aline="center" class="intro">
+    <img src="./images/hooli.jpeg" alt="Your Photo" class="profile-pic" />
+
+    <h1 class="intro-name">Maharudrappa Hooli</h1>
+    <h2 class="intro-role">Trainee Engineer – iPaaS</h2>
+
+    <button class="start-btn" onclick="showReport()">Continue ➜</button>
+  </div>
+
+  <!-- ---------------------- MONTHLY REPORT SCREEN ---------------------- -->
+ <div id="report-screen" class="hidden">
+
+  <header>
+    <h1 class="title">Welcome to Monthly Report</h1>
+  </header>
+
+  <div class="week-container">
+    <button onclick="openWeek('week1')">Week 1</button>
+    <button onclick="openWeek('week2')">Week 2</button>
+    <button onclick="openWeek('week3')">Week 3</button>
+    <button onclick="openWeek('week4')">Week 4</button>
+    <button onclick="openWeek('week5')">Week 5</button>
+  </div>
+
+  <!-- BUTTON TO GO BACK TO PROFILE -->
+  <div class="profile-btn-container">
+    <button onclick="goProfile()" class="profile-btn">View Profile Info</button>
+  </div>
+
+  <div id="week-screen" class="hidden"></div>
+</div>
+<!-- <button onclick="openWeek('week1')">Week 1</button>F -->
+  <script>
+    function showReport() {
+      document.getElementById("intro-screen").classList.add("hidden");
+      document.getElementById("report-screen").classList.remove("hidden");
+    }
+  </script>
+
+  <script src="script.js"></script>
+</body>
+</html>
