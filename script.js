@@ -146,13 +146,13 @@ const weekData = {
       info: "Introduction to fundamental cloud concepts used in modern IT infrastructure."
     },
     {
-      title: "Microservices (MV)",
+      title: "Virtual Machine (VM)",
       points: [
-        "Service communication",
-        "Orchestration & deployment",
-        "API gateways & scaling"
+        "Basic Virtualization",
+        "Container Editions & deployment",
+        "Virtualization & scaling"
       ],
-      info: "Understanding microservices architecture and its advantages in large-scale systems."
+      info: "Understanding Virtualization architecture and its advantages in large-scale systems."
     }
     // ,
     // {
